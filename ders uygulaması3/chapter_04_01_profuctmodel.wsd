@@ -1,0 +1,30 @@
+@startuml Class Diagram
+title Product Model
+class Product {
+    -name :string
+    -price:float
+    -quantity:int
+    --
+    +getname() :string
+    +getprice():float
+    +getquantity():int
+    --
+    +setname(value:string)
+    +setprice(value:float)
+    +setquantity(value:int)
+    --
+
+    +Product(name:string,price:float,quantity:int)
+     --
+     +getTotalPrice():float
+}
+class object{
+    toString():string
+}
+
+Product -up-|> Object:"<<ectends>>"
+
+hide empty members
+
+
+@enduml
